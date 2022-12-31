@@ -34,8 +34,9 @@ const generateTweet = async () => {
   return prefix + randomItem(twists) + ' ' + randomItem(ideas) + ' for ' + randomItem(markets) + '.';
 }
 
-app.get("/", await (req, res) => {
-  res.send(generateTweet()listen);
+app.get("/", async (req, res) => {
+  const data = await generateTweet()
+  res.send(data);
 });
 
 app.listen(5000, () => {
