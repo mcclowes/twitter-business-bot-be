@@ -20,8 +20,6 @@ const generateTweet = async () => {
   let ideas = [] 
   let markets = [] 
   
-  console.log(data)
-  
   data.sheet1.forEach(item=>{
     if(item.twists) { twists.push(item.twists) }
     if(item.ideas) { ideas.push(item.ideas) }
